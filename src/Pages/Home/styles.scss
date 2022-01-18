@@ -1,79 +1,117 @@
-.container{
+.container {
     width: 100%;
     max-width: 1400px;
     margin: 0px auto;
     padding: 20px;
 
-    .container-header{
+    .container-header {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        margin: 20px 0px 80px ;
-        border-bottom: 2px solid #FF4500;
-        
-        h1{
-            font-size: 3.2rem;
+        margin: 20px 0px 80px;
+        border-bottom: 2px solid #ff4500;
+
+        .title{
+            display: flex;
+            align-items: center;
+
+            span{
+                font-size: 3rem;
+                margin-right: 15px;
+                animation: App-logo-spin  8s linear;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 2.2rem;
+                }
+            }
+
+            h1 {
+                font-size: 3.2rem;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 2rem;
+                }
+
+                @media screen and (max-width: 400px) {
+                    font-size: 1.6rem;
+                }
+            }
+
         }
 
-        a{
+        a {
             font-size: 1.6rem;
             padding: 6px 20px;
             border-radius: 5px;
-            background-color: #FF4500;
+            background-color: #ff4500;
             color: #fff;
+
+            @media screen and (max-width: 500px) {
+                font-size: 1.2rem;
+            }
+
+            @media screen and (max-width: 400px) {
+                font-size: 1rem;
+            }
         }
     }
-    .container-notes{
+    .container-notes {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         justify-items: center;
         align-items: center;
         gap: 30px;
-        
 
-        div{
+        div {
             border: 1px solid #cccc;
-            box-shadow: 5px 1px 0px 0px #FF4500 ;        
-            
-            .container-content{
+            box-shadow: 3px 1px 0px 0px #ff4500;
+
+            .container-content {
                 width: 250px;
                 height: 250px;
                 padding: 20px;
-                
+
                 overflow-y: auto;
-    
-                h3{
+
+                h3 {
                     text-align: center;
                     text-transform: capitalize;
                     margin-bottom: 15px;
                 }
-    
-                p{
+
+                p {
                     text-align: left;
                 }
             }
-    
-            .footer{
+
+            .footer {
                 padding: 5px 20px;
                 display: flex;
-                align-items: 'center';
+                align-items: "center";
                 justify-content: space-between;
 
-                span{
-                    color: red;
+                span {
+                    color: #FF0000;
                 }
-                
-               .menus{
+
+                .menus {
                     border: none;
                     box-shadow: none;
-                    a{
-                        
+                    a {
                         color: #222;
                         font-size: 20px;
                         margin-left: 10px;
                     }
-               }
+                }
             }
         }
     }
 }
+
+@keyframes App-logo-spin {
+    0%   {color: #222;}
+  25%  {color: #ff5183;}
+  50%  {color: #ff4500;}
+  100% {color: #ffc276;}
+}
+

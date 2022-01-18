@@ -19,17 +19,29 @@
             margin-bottom: 20px;
             text-transform: capitalize;
             border-bottom: 2px solid #FF4500;
+
+            @media screen and (max-width: 500px) {
+                font-size: 2rem;
+            }
         }
 
         span{
             font-size: 1.1rem;
             line-height: 25px;
 
+            @media screen and (max-width: 500px) {
+                font-size: 1rem;
+            }
+
             &:nth-child(3){
                 margin-top: 30px;
                 font-size: 1.6rem;
                 font-weight: bold;
                 color: #FF4500;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 1.3rem;
+                }
                 
             }
         }
@@ -42,6 +54,11 @@
             color: #fff;
             margin:  20px 0px;
             cursor: pointer;
+
+            @media screen and (max-width: 500px) {
+                font-size: 1.1rem;
+                padding: 4px 15px;
+            }
         }
 
         a{
@@ -51,6 +68,11 @@
             background-color: #0051ff;
             color: #fff;
             cursor: pointer;
+
+            @media screen and (max-width: 500px) {
+                font-size: 1.1rem;
+                padding: 4px 15px;
+            }
 
         }
 

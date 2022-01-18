@@ -28,7 +28,7 @@
                 text-align: center;
             }
 
-            &:nth-child(3){
+            &:nth-child(5){
                 text-align: center;
                 cursor: pointer;
             }
@@ -37,7 +37,16 @@
 
         textarea{
             height: 120px;
-            
+        }
+
+        .date{
+            cursor: pointer;
+        }
+
+        .errors{
+            font-size: 1rem;
+            color: red;
+            margin: 6px 0;
         }
 
         button{

@@ -1,17 +1,18 @@
 import React from 'react';
-import axios from 'axios';
 import './styles.scss'
-import { Link } from 'react-router-dom'
 
-import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom'
 
 import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { schema } from '../../Schema'
 
 
 function CreateNotes() {
     let navigate = useNavigate()
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
 
     async function postNotes({ title, description, date }) {
         try {
@@ -26,12 +27,21 @@ function CreateNotes() {
     }
     return (
         <form onSubmit={handleSubmit(postNotes)} className='form'>
-            <div >
-                <input {...register("title")} placeholder='Title' />
-                <textarea type="text" {...register("description")} placeholder='notes...' />
-                <input type='date' {...register("data")} />
+            <div>
+                <div>
+                    <input {...register("title")} placeholder='Title' autoFocus />
+                    <p className='errors'>{errors.title?.message}</p>
+                </div>
+                <div>
+                    <textarea type="text" {...register("description")} placeholder='notes...' />
+                    <p className='errors' >{errors.description?.message}</p>
+                </div>
+                <div>
+                    <input type='date' className='date' {...register("date")} />
+                    <p className='errors' >{errors.date?.message}</p>
+                </div>
                 <button type="submit">Enviar</button>
-                <Link to='/'> &#8592; voltar</Link>
+                <Link to='/'> &#8592; back</Link>
             </div>
         </form>
     );

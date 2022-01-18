@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './styles.scss'
 
-import { useParams, useNavigate, Link } from 'react-router-dom'
 import axios from 'axios';
-
+import { useParams, useNavigate, Link } from 'react-router-dom'
 
 function DeleteNotes() {
     const { id } = useParams()
     let navigate = useNavigate()
+
+    const [notes, setNotes] = useState('')
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/notes/${id}`).then((response) => {setNotes(response.data)});
+    }, [])
 
     async function deleteNote() {
         try {
@@ -18,12 +23,7 @@ function DeleteNotes() {
         }
     }
 
-    const [notes, setNotes] = useState('')
-
-
-    useEffect(() => {
-        fetch(`http://localhost:5000/notes/${id}`).then((response) => (response.json())).then(data => { setNotes(data) });
-    }, [])
+    
     return (
         <div className='contente-delete'>
             <div>
