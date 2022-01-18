@@ -2,18 +2,25 @@
     width: 100%;
     max-width: 1400px;
     margin: 0px auto;
+    padding: 20px;
 
     .container-header{
         display: flex;
         align-items: center;
         justify-content: space-around;
         margin: 20px 0px 80px ;
+        border-bottom: 2px solid #FF4500;
+        
         h1{
             font-size: 3.2rem;
         }
 
         a{
-            font-size: 2rem;
+            font-size: 1.6rem;
+            padding: 6px 20px;
+            border-radius: 5px;
+            background-color: #FF4500;
+            color: #fff;
         }
     }
     .container-notes{
@@ -22,9 +29,11 @@
         justify-items: center;
         align-items: center;
         gap: 30px;
+        
 
         div{
             border: 1px solid #cccc;
+            box-shadow: 5px 1px 0px 0px #FF4500 ;        
             
             .container-content{
                 width: 250px;
@@ -56,6 +65,7 @@
                 
                .menus{
                     border: none;
+                    box-shadow: none;
                     a{
                         
                         color: #222;

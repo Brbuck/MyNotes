@@ -21,16 +21,16 @@ function Home() {
             <div className="container-notes">
                 {
                     notes.map((item, index) => (
-                        <div>
-                            <div className='container-content' key={index}>
+                        <div key={index}>
+                            <div className='container-content' >
                                 <h3>{item.title}</h3>
                                 <p>{item.description}</p>
                             </div>
                             <div className='footer'>
                                 <span>{item.data}</span>
                                 <div className='menus'>
-                                    <Link to={`/notes/${item.id}`}><AiTwotoneEdit /></Link>
-                                    <Link to={`/delete/${item.id}`}><RiDeleteBinFill /></Link>
+                                    <Link title='Editar' to={`/notes/${item.id}`}><AiTwotoneEdit /></Link>
+                                    <Link title='Excluir' to={`/delete/${item.id}`}><RiDeleteBinFill /></Link>
                                 </div>
                             </div>
                         </div>

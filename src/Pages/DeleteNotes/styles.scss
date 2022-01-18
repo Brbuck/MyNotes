@@ -1,0 +1,58 @@
+.contente-delete{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    div{
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            border-bottom: 2px solid #FF4500;
+        }
+
+        span{
+            font-size: 1.1rem;
+            line-height: 25px;
+
+            &:nth-child(3){
+                margin-top: 30px;
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: #FF4500;
+                
+            }
+        }
+
+        button{
+            font-size: 1.4rem;
+            padding: 6px 20px;
+            border-radius: 5px;
+            background-color: #FF4500;
+            color: #fff;
+            margin:  20px 0px;
+            cursor: pointer;
+        }
+
+        a{
+            font-size: 1.4rem;
+            padding: 6px 20px;
+            border-radius: 5px;
+            background-color: #0051ff;
+            color: #fff;
+            cursor: pointer;
+
+        }
+
+    }
+}

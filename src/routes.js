@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom'
 
 import Home from './Pages/Home/home'
-import CreateNotes from './Pages/createNotes'
-import Editar from './Pages/editar'
-import Delete from './Pages/deleteNote'
+import CreateNotes from './Pages/CreateNotes'
+import Editar from './Pages/EditNotes'
+import Delete from './Pages/DeleteNotes'
 
 function AuthRoutes() {
 
