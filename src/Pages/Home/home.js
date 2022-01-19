@@ -9,6 +9,11 @@ import { RiDeleteBinFill } from "react-icons/ri";
 function Home() {
     const [notes, setNotes] = useState([])
 
+    notes.sort(function(a,b) {
+        if(a.date < b.date) return -1;
+        if(a.date > b.date) return 1;
+        return 0;
+    });
 
     useEffect(() => {
         fetch('http://localhost:5000/notes').then((response) => (response.json())).then(data => { setNotes(data) });
