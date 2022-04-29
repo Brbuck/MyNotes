@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../CreateNotes/styles.scss'
-
+/* ---- */
 import axios from 'axios';
 import { Link, useParams, useNavigate } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ function Editar() {
 
     useEffect(() => {
         fetch(`http://localhost:5000/notes/${id}`).then((response) => (response.json())).then(data => { setPosts(data) });
-    }, [])
+    }, [id])
 
     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
 

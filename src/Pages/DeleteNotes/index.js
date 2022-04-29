@@ -12,7 +12,7 @@ function DeleteNotes() {
 
     useEffect(() => {
         axios.get(`http://localhost:5000/notes/${id}`).then((response) => {setNotes(response.data)});
-    }, [])
+    }, [id])
 
     async function deleteNote() {
         try {
